@@ -17,8 +17,7 @@ module.exports = (env, callback) ->
         for itemName, item of contents['lists'][options.listName]
           unless itemName.indexOf('.') == 0
             list.push item
-            
-        if options.sort? and options.sort == 'true'
+        if options.sort?
           list = list.sort (a, b) ->
             aVal = a.metadata[options.sort]
             bVal = b.metadata[options.sort]
