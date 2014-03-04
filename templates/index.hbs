@@ -1,10 +1,22 @@
 {{!< layout.hbs }}
-{{#with page}}
-  <div class="{{metadata.slug}}">
+<div class="{{page.metadata.slug}}">
+  {{#with page}}
     <h1>{{title}}</h1>
     <h3>{{metadata.subheading}}</h3>
     <div class="content">
       {{{html}}}
     </div>
-  </div>
-{{/with}}
+
+  {{/with}}
+
+  <h2>Music</h2>
+  {{#list env contents listName='music' sort='date'}}
+    {{> music-list-item}}
+  {{/list}}
+
+  <h2>Web</h2>
+  {{#list env contents listName='web' sort='date' sortDescending='true'}}
+    {{> web-list-item}}
+  {{/list}}
+
+</div>

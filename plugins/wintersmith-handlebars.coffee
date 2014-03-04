@@ -18,7 +18,6 @@ module.exports = (env, callback) ->
   class HandlebarsTemplate extends env.TemplatePlugin
     constructor: (@tpl, @filepath) ->
     render: (locals, callback) ->
-      console.log 'locals are', locals
       try
         rendered = @tpl locals
         callback null, new Buffer rendered
@@ -87,7 +86,9 @@ module.exports = (env, callback) ->
   # Registering the plugins
   env.registerTemplatePlugin '**/*.*(html|hbs)', HandlebarsTemplate
   env.registerTemplatePlugin "**/#{options.partialDir}/*.*(html|hbs)", HandlebarsPartial
-  env.registerTemplatePlugin "**/#{options.helperDir}/*.*(js)", HandlebarsHelper
+  env.registerTemplatePlugin "**/#{options.helperDir}/*.*(js|coffee)", HandlebarsHelper
+  env.Handlebars = Handlebars
+  env.HandlebarsTemplate = HandlebarsTemplate
 
   # return callback
   callback()

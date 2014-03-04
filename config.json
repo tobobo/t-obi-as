@@ -1,8 +1,9 @@
 {
   "locals": {
-    "title": "t.obi.as blog"
+    "title": "t.obi.as"
   },
   "plugins": [
-    "./plugins/wintersmith-handlebars.coffee"
+    "./plugins/wintersmith-handlebars.coffee",
+    "./plugins/lists.coffee"
   ]
 }
