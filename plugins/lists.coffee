@@ -11,7 +11,6 @@ module.exports = (env, callback) ->
     lists
 
   getList = (contents, options) ->
-    console.log 'options are', options
     if contents['lists']?
       if contents['lists'][options.listName]?
         list = []
@@ -35,8 +34,10 @@ module.exports = (env, callback) ->
               result = -1
             else
               result = 0
-            if options.sortDescending
+            console.log options.sortDescending?, options.sortDescending == 'true'
+            if options.sortDescending? and options.sortDescending == 'true'
               result = result*-1
+            result
 
         list
       else
