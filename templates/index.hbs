@@ -1,0 +1,10 @@
+{{!< layout.hbs }}
+{{#with page}}
+  <div class="{{metadata.slug}}">
+    <h1>{{title}}</h1>
+    <h3>{{metadata.subheading}}</h3>
+    <div class="content">
+      {{{html}}}
+    </div>
+  </div>
+{{/with}}

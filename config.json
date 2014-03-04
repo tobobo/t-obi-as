@@ -1,0 +1,8 @@
+{
+  "locals": {
+    "title": "t.obi.as blog"
+  },
+  "plugins": [
+    "./plugins/wintersmith-handlebars.coffee"
+  ]
+}
