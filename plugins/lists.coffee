@@ -18,7 +18,7 @@ module.exports = (env, callback) ->
           unless itemName.indexOf('.') == 0
             list.push item
             
-        if options.sort?
+        if options.sort? and options.sort == 'true'
           list = list.sort (a, b) ->
             aVal = a.metadata[options.sort]
             bVal = b.metadata[options.sort]
@@ -34,7 +34,6 @@ module.exports = (env, callback) ->
               result = -1
             else
               result = 0
-            console.log options.sortDescending?, options.sortDescending == 'true'
             if options.sortDescending? and options.sortDescending == 'true'
               result = result*-1
             result
