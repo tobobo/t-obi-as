@@ -1,0 +1,26 @@
+{
+  "name": "t-obi-as",
+  "version": "0.0.0",
+  "description": "A static site built with wintersmith for http://t.obi.as",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "handlebars": "~2.0.0-alpha.1",
+    "wintersmith": "~2.0.10",
+    "wintersmith-handlebars": "~0.0.5",
+    "coffee-script": "~1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tobobo/t-obi-as.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tobobo/t-obi-as/issues"
+  },
+  "homepage": "https://github.com/tobobo/t-obi-as"
+}
