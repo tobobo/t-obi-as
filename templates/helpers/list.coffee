@@ -1,3 +1,5 @@
+# A handlebars helper to display the contents of a list
+
 module.exports = (env, contents, options) ->
 
   out = "<ul class=\"#{options.hash.listName} list-helper\">"

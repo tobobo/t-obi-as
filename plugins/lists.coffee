@@ -1,3 +1,6 @@
+# A plugin to get lists of content from "lists" folder in the "content" directory.
+# Currently has single-level nesting of lists. Maybe this will change in the future?
+
 module.exports = (env, callback) ->
 
   getLists = (contents, options) ->
