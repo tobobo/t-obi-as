@@ -3,7 +3,7 @@
     "title": "t.obi.as"
   },
   "plugins": [
-    "./plugins/wintersmith-handlebars.coffee",
+    "./plugins/handlebars.coffee",
     "./plugins/lists.coffee",
     "wintersmith-sass"
   ]
