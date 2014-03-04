@@ -1,6 +1,6 @@
 ---
 title: Tobias Butler
-subheading: creative digital production
-template: index.hbs
+subheading: new website coming soon
+template: splash.hbs
 slug: index
 ---
