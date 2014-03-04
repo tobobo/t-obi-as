@@ -1,10 +1,19 @@
 {{!< layout.hbs }}
 <div class="{{page.metadata.slug}} wrapper">
 
-  <script type="text/javascript" src="/script/404.js"></script>
+  <h1>{{page.title}}</h1>
 
-  {{> page-content}}
+  <p id="status">
+    Attempting to redirect to <span id="redirect-url"></span>
+  </p>
+
+  <p>
+    <a href="/">Return to homepage</a>
+  </p>
 
   {{> copyright}}
 
 </div>
+
+{{! redirect script}}
+<script type="text/javascript" src="/script/404.js"></script>
