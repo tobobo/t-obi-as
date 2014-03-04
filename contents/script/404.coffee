@@ -30,7 +30,7 @@ urlEl.innerHTML = url
 checkUrl url, (success) ->
   if success
     statusEl.innerHTML = """
-      Redirecting you to <span class="redirect-url">#{url}</span> ...
+      Redirecting to <span class="redirect-url">#{url}</span> ...
     """
     window.location = url
   else
