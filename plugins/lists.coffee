@@ -24,9 +24,9 @@ module.exports = (env, callback) ->
             if not aVal and not bVal
               result = 0
             else if not aVal
-              result = 1
-            else if not bVal
               result = -1
+            else if not bVal
+              result = 1
             else if aVal > bVal
               result = 1
             else if aVal < bVal
