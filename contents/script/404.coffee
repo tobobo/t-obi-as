@@ -21,8 +21,9 @@ path = window.location.pathname
 newHost = "http://hosted-by-t.obi.as"
 url = "#{newHost}#{path}"
 
-urlEl = document.getElementById('redirect-url')
-statusEl = document.getElementById('redirect-status')
+urlEl = document.getElementById 'redirect-url'
+statusEl = document.getElementById 'redirect-status'
+titleEl = document.getElementById 'page-title'
 
 urlEl.innerHTML = url
 
@@ -33,6 +34,7 @@ checkUrl url, (success) ->
     """
     window.location = url
   else
+    titleEl.style.display = 'block'
     statusEl.innerHTML = """
       <span class="redirect-url">#{window.location}</span> was not found.
     """
