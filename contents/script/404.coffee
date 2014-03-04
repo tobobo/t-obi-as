@@ -1,11 +1,3 @@
-path = window.location.pathname
-newHost = "http://hosted-by-t.obi.as"
-url = "#{newHost}#{path}"
-
-statusEl = document.getElementById('status')
-urlElement = document.getElementById('redirect-url')
-urlElement.innerHTML = url
-
 checkUrl = (url, callback) ->
 
   if arguments.length < 2
@@ -24,6 +16,15 @@ checkUrl = (url, callback) ->
     callback true
   script.onerror = ->
     callback false
+
+path = window.location.pathname
+newHost = "http://hosted-by-t.obi.as"
+url = "#{newHost}#{path}"
+
+urlEl = document.getElementById('redirect-url')
+statusEl = document.getElementById('redirect-status')
+
+urlEl.innerHTML = url
 
 checkUrl url, (success) ->
   if success
