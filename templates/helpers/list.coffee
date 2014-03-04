@@ -1,6 +1,6 @@
 module.exports = (env, contents, options) ->
 
-  out = "<ul class=\"#{options.hash.content} list-helper\">"
+  out = "<ul class=\"#{options.hash.listName} list-helper\">"
 
   for item in env.helpers.getList(contents, options.hash)
     if options.fn?

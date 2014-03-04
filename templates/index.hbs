@@ -1,15 +1,15 @@
 {{!< layout.hbs }}
-<div class="{{page.metadata.slug}}">
+<div class="{{page.metadata.slug}} wrapper">
 
   {{#with page}}
-    <h1>{{title}}</h1>
-    <h3>{{metadata.subheading}}</h3>
+    <h1 class="title">{{title}}</h1>
+    <p class="subheading">{{metadata.subheading}}</p>
     <div class="content">
       {{{html}}}
     </div>
   {{/with}}
-
-  <h2>Web</h2>
+  
+  <h2>Web Development</h2>
   {{#list env contents listName='web' sort='date' sortDescending='true'}}
     {{> web-list-item}}
   {{/list}}
@@ -18,5 +18,7 @@
   {{#list env contents listName='music' sort='date' sortDescending='true'}}
     {{> music-list-item}}
   {{/list}}
+
+  <p class="copyright">&copy; Tobias Butler {{current-year}}</p>
 
 </div>

@@ -4,6 +4,7 @@
   },
   "plugins": [
     "./plugins/wintersmith-handlebars.coffee",
-    "./plugins/lists.coffee"
+    "./plugins/lists.coffee",
+    "wintersmith-sass"
   ]
 }
