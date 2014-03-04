@@ -1,9 +1,8 @@
 checkUrl = (url, callback) ->
-
   if arguments.length < 2
     throw "Must provide url and callback."
   else if url.match(/.js$/)?
-    throw "Cannot test javascript files."
+    throw "Not safe to test javascript files."
 
   separator = if url.indexOf('?') > -1 then '&' else '?'
   url = url + separator + (new Date).getTime()
@@ -14,8 +13,11 @@ checkUrl = (url, callback) ->
 
   script.onload = ->
     callback true
+    script.parentNode.removeChild script
   script.onerror = ->
     callback false
+    script.parentNode.removeChild script
+    
 
 path = window.location.pathname
 newHost = "http://hosted-by-t.obi.as"
