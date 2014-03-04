@@ -5,6 +5,7 @@
   "plugins": [
     "./plugins/handlebars.coffee",
     "./plugins/lists.coffee",
-    "wintersmith-sass"
+    "wintersmith-sass",
+    "wintersmith-coffee"
   ]
 }

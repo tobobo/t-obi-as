@@ -1,6 +1,6 @@
 ---
 title: Tobias Butler
 subheading: new website coming soon
-template: splash.hbs
+template: page.hbs
 slug: index
 ---

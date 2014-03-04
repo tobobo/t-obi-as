@@ -12,7 +12,8 @@
     "grunt-wintersmith": "0.0.2",
     "grunt-s3": "~0.2.0-alpha.3",
     "wintersmith-sass": "~0.2.4",
-    "array.prototype.findindex": "~0.1.0"
+    "array.prototype.findindex": "~0.1.0",
+    "wintersmith-coffee": "~0.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
