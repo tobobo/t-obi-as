@@ -8,10 +8,8 @@ module.exports = (env, contents, options) ->
     if options.fn?
       content = options.fn item
     else
-      content = ""
+      content = item.html
 
     out += "<li class=\"list-helper-item\">#{content}</li>"
 
   out += "</ul>"
-
-  out
