@@ -1,8 +1,25 @@
+// variables
+
+$break-small: 480px
+$break-med: 800px
+$break-large: 960px
+
 // mixins
 
 @mixin skinny-text 
   font-weight: 100
   letter-spacing: 0.04em
+
+@mixin responsive-column
+  display: inline-block
+  vertical-align: top
+  width: 100%
+
+  @media screen and (min-width: $break-small)
+    width: 50%
+
+  @media screen and (min-width: $break-large)
+    width: 33.33%
 
 
 // common styles
@@ -74,10 +91,7 @@ h1.title
 
   &.music, &.web, &.sound
     li 
-      display: inline-block
-      vertical-align: top
-      width: 100%
-      max-width: 360px
+      @include responsive-column
       padding: 0 20px 20px 0
     
 
