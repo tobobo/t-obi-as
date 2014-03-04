@@ -1,3 +1,4 @@
+Handlebars = require 'handlebars'
 # A handlebars helper to display the contents of a list
 
 module.exports = (env, contents, options) ->
@@ -13,3 +14,5 @@ module.exports = (env, contents, options) ->
     out += "<li class=\"list-helper-item\">#{content}</li>"
 
   out += "</ul>"
+
+  new Handlebars.SafeString unescape(out)
