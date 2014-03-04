@@ -3,6 +3,9 @@
 
 module.exports = (env, callback) ->
 
+
+  # get all content lists
+
   getLists = (contents, options) ->
     if options == undefined then options = {}
     lists = {}
@@ -12,6 +15,9 @@ module.exports = (env, callback) ->
           options.listName = listName
           lists[listName] = getList(contents, options)
     lists
+
+
+  # get one content list
 
   getList = (contents, options) ->
     if contents['lists']?
@@ -26,6 +32,9 @@ module.exports = (env, callback) ->
         []
     else
       []
+
+
+  # sort a content list according to its options
 
   sortList = (list, options) ->
     if options.sort?
@@ -50,9 +59,12 @@ module.exports = (env, callback) ->
     else
       list
 
+  # test a filename for the startyness of a dot
+
   isHiddenFile = (fileName) ->
     fileName.indexOf('.') == 0
 
 
   env.helpers.getList = getList
+  env.helpers.getLists = getLists
   callback()
