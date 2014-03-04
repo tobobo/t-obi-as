@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "description": "A static site built with wintersmith for http://t.obi.as",
   "dependencies": {
+  },
+  "devDependencies": {
     "grunt": "~0.4.2",
     "handlebars": "~2.0.0-alpha.1",
     "wintersmith": "~2.0.10",
     "wintersmith-handlebars": "~0.0.5",
-    "coffee-script": "~1.7.1"
+    "coffee-script": "~1.7.1",
+    "grunt-wintersmith": "0.0.2",
+    "grunt-s3": "~0.2.0-alpha.3"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
