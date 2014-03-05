@@ -4,25 +4,23 @@
   {{> page-content}}
   
   <h2>Web Development</h2>
-  {{#list env contents listName='web' sort='date' sortDescending='true'}}
+  {{#list env contents 'web' sort='date' sortDescending='true'}}
     {{> web-list-item}}
   {{/list}}
 
   <h2>Music</h2>
-  {{#list env contents listName='music' sort='date' sortDescending='true'}}
+  {{#list env contents 'music' sort='date' sortDescending='true'}}
     {{> music-list-item}}
   {{/list}}
 
   <h2>Other Sounds</h2>
-  {{#list env contents listName='sound' sort='date' sortDescending='true'}}
+  {{#list env contents 'sound' sort='date' sortDescending='true'}}
     {{> sound-list-item}}
   {{/list}}
 
   <h2>Education</h2>
-  {{#list env contents listName='education' sort='date' sortDescending='true'}}
-    <h3>{{> linked-title}}</h3>
-    <p class="location">{{metadata.location}}</p>
-    {{{html}}}
+  {{#list env contents 'education' sort='date' sortDescending='true'}}
+    {{> education-list-item}}
   {{/list}}
 
   {{> copyright}}

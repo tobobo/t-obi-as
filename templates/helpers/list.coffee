@@ -1,9 +1,10 @@
 Handlebars = require 'handlebars'
 # A handlebars helper to display the contents of a list
 
-module.exports = (env, contents, options) ->
+module.exports = (env, contents, listName, options) ->
+  options.hash.listName = listName
 
-  out = "<ul class=\"#{options.hash.listName} list-helper\">"
+  out = "<ul class=\"#{listName} list-helper\">"
 
   for item in env.helpers.getList(contents, options.hash)
     clickable = if item.metadata.link? then 'clickable' else ''
