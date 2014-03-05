@@ -211,11 +211,12 @@ ul.list-helper
       border: 1px solid $light-grey
       border-radius: 2px
       opacity: $translucent
-      @include transition(opacity $transition-time ease-in-out)
+      background-color: white
+      @include transition(all $transition-time ease-in-out)
 
       &:after
-        font-size: 6em
-        color: $light-grey
+        font-size: 24px
+        color: rgba(0,0,0,0.75)
         content: '\25B6'
         display: block
         width: 100%
@@ -227,8 +228,7 @@ ul.list-helper
 
       &:hover
         opacity: 1
-        &:after
-          color: #a2a2a2
+        background-color: #f6f6f6
 
     iframe
       width: 100%
