@@ -18,6 +18,13 @@
     {{> sound-list-item}}
   {{/list}}
 
+  <h2>Education</h2>
+  {{#list env contents listName='education' sort='date' sortDescending='true'}}
+    <h3>{{> linked-title}}</h3>
+    <p class="location">{{metadata.location}}</p>
+    {{{html}}}
+  {{/list}}
+
   {{> copyright}}
 
 </div>
