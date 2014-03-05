@@ -1,7 +1,7 @@
 ---
 title: Trauma
 htmlTitle: <em>Trauma</em>
-date: 2013-4-07
+date: 2013-4-08
 link: http://vimeo.com/69725091
 vimeo: 69725091
 vimeoRatio: "16:9"
