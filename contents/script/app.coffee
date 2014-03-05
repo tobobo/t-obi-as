@@ -5,7 +5,7 @@ nnmForEach = (nodeMap, cb) ->
 addExternalLinks = ->
   externalLinks = document.querySelectorAll 'a[href^=\'http\']'
 
-  nnmFOrEach externalLinks, (element) ->
+  nnmForEach externalLinks, (element) ->
     element.target = '_blank'
 
 
