@@ -1,6 +1,6 @@
 Handlebars = require 'handlebars'
 
-module.exports = (env, contents, bandcampData, options) ->
+module.exports = (bandcampData, options) ->
   if bandcampData
     """
     <div class="media bandcamp-wrapper">

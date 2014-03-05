@@ -1,3 +1,7 @@
+{{#if metadata.vimeo}}
+  {{{vimeo-embed metadata.vimeo ratio=metadata.vimeoRatio}}}
+{{/if}}
 <h3>{{> linked-title}}</h3>
 {{{html}}}
-{{{bandcamp-embed env contents metadata.bandcamp}}}
+
+{{{bandcamp-embed metadata.bandcamp}}}

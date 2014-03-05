@@ -8,6 +8,29 @@ addExternalLinks = ->
   nnmForEach externalLinks, (element) ->
     element.target = '_blank'
 
+addVimeoEvents = ->
+  vimeoElements = document.querySelectorAll '.media.vimeo'
+
+  vimeoElementClick = ->
+    @innerHTML = "<iframe src=\"//player.vimeo.com/video/#{@getAttribute('data-vimeoId')}?autoplay=1\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+
+  nnmForEach vimeoElements, (element) ->
+    element.onclick = vimeoElementClick
+
+  resizeVideos = ->
+    nnmForEach vimeoElements, (element) ->
+      ratio = element.getAttribute('data-ratio')
+      if ratio?
+        [width, height] = ratio.split ':'
+        quotient = height/width
+        newHeight = element.offsetWidth*quotient + "px"
+        element.style.height = newHeight
+
+  resizeVideos()
+  window.onresize = resizeVideos
+
+addMediaLinks = ->
+  addVimeoEvents()
 
 addListItemLinks = ->
   listHelperItems = document.querySelectorAll 'ul.list-helper li'
