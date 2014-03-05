@@ -138,7 +138,35 @@ $list-margin: 20px
       padding: $list-margin $list-margin 40px
       h3
         margin-top: 0
-    
+
+// media
+
+.media
+
+  &.bandcamp
+    border-radius: 21px
+    opacity: 1
+    width: 42px
+    height: 42px
+    margin: 0 0 2px 0
+    overflow: hidden
+    border: 1px solid #d2d2d2
+    @include transition(all $transition-time ease-in-out)
+
+    iframe
+      width: calc(100% + 2px)
+      margin: -1px 0 0 -1px
+
+    &:hover
+      padding: 1px
+      border-radius: 0
+      border-color: transparent
+      opacity: 1
+      height: 44px
+      width: 100%
+      margin: -1px 0 0 -1px
+
+
 
 // page elements 
 

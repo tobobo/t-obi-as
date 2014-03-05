@@ -1,8 +1,12 @@
+nnmForEach = (nodeMap, cb) ->
+  for i in [0..nodeMap.length - 1]
+    cb nodeMap.item(i)
+
 addExternalLinks = ->
   externalLinks = document.querySelectorAll 'a[href^=\'http\']'
 
-  for i in [0..externalLinks.length - 1]
-    externalLinks.item(i).target = '_blank'
+  nnmFOrEach externalLinks, (element) ->
+    element.target = '_blank'
 
 
 addListItemLinks = ->
@@ -17,11 +21,12 @@ addListItemLinks = ->
       if titleLink?
         window.open titleLink.href
 
-  for i in [0..listHelperItems.length - 1]
-    listHelperItems.item(i).onclick = listHelperClick
+  nnmForEach listHelperItems, (element) ->
+    element.onclick = listHelperClick
 
 
 init = (->
   addExternalLinks()
   addListItemLinks()
+  addMediaLinks()
 )()
