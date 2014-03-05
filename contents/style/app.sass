@@ -119,14 +119,16 @@ $list-margin: 20px
   list-style-type: none
   padding-bottom: 40px
 
-  li.clickable
-    cursor: pointer
-    @include transition(background-color $transition-time ease-in-out)
-    &:hover
-      background-color: rgba(0,0,0, 0.05)
-      a.title
-        text-decoration: none
-        color: $link-hover-color
+  li
+    border-radius: 2px
+    &.clickable
+      cursor: pointer
+      @include transition(background-color $transition-time ease-in-out)
+      &:hover
+        background-color: rgba(0,0,0, 0.03)
+        a.title
+          text-decoration: none
+          color: $link-hover-color
 
   &.music, &.web, &.sound
     margin: 0 -$list-margin/2
