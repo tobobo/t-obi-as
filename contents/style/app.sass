@@ -1,8 +1,24 @@
+// init
+
+@mixin transition($params)
+  transition: $params
+  -webkit-transition: $params
+  -moz-transition: $params
+  -o-transition: $params
+  -ms-tarnsition: $params
+
 // variables
 
 $break-small: 480px
 $break-med: 800px
 $break-large: 960px
+
+$background-color: #FFFCEE
+$text-color: #404344
+$link-color: #35829D
+$link-hover-color: #65A1ED
+
+$transition-time: 0.2s
 
 // mixins
 
@@ -32,8 +48,8 @@ $break-large: 960px
 body 
   font-family: "Helvetica Neue", sans-serif
   font-weight: 300
-  background-color: #FFFCEE
-  color: #404344
+  background-color: $background-color
+  color: $text-color
 
 
 // headers
@@ -72,10 +88,11 @@ p
   margin: 0.5em 0
 
 a 
-  color: #35829D
+  color: $link-color
+  @include transition(color $transition-time ease-in-out)
 
   &:hover
-    color: #65A1DD
+    color: $link-hover-color
 
 
 // full page layout
@@ -96,14 +113,29 @@ h1.title
 
 // lists
 
+$list-margin: 20px
+
 .list-helper 
   list-style-type: none
   padding-bottom: 40px
 
+  li.clickable
+    cursor: pointer
+    @include transition(background-color $transition-time ease-in-out)
+    &:hover
+      background-color: rgba(0,0,0, 0.05)
+      a.title
+        text-decoration: none
+        color: $link-hover-color
+
   &.music, &.web, &.sound
-    li 
+    margin: 0 -$list-margin/2
+    li
       @include responsive-column
       padding: 0 20px 20px 0
+      padding: $list-margin $list-margin 40px
+      h3
+        margin-top: 0
     
 
 // page elements 
