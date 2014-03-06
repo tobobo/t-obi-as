@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Typing",
+    "skills": [
+      ["Javascript"],
+      ["Coffeescript", "http://coffeescript.org"],
+      ["node"],
+      ["Ruby"],
+      ["Rails"],
+      ["Python"],
+      ["Flask"],
+      ["PHP"],
+      ["SQL"],
+      ["MongoDB"]
+    ]
+  },
+
+  {
+    "title": "Clicking",
+    "skills": [
+      ["Photoshop"],
+      ["Logic Pro"],
+      ["Ableton Live"],
+      ["Max/MSP"]
+    ]
+  },
+
+  {
+    "title": "Jammin'",
+    "skills": [
+      ["Guitar"],
+      ["Piano"],
+      ["Drums"],
+      ["Saxophone"],
+      ["Sound design and production"]
+    ]
+  }
+]

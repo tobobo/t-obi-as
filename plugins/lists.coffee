@@ -11,7 +11,11 @@ module.exports = (env, callback) ->
     lists = {}
     if content['lists']?
       for listName, data of contents['lists']
-        unless isHiddenFile(listName)
+        if isJsonFile(listName)
+          listName = listName.split('.').slice(0,-1).join('.')
+          options.listName = listName
+          lists[listName] = getList(contents, options)
+        else if not isHiddenFile(listName)
           options.listName = listName
           lists[listName] = getList(contents, options)
     lists
@@ -28,6 +32,10 @@ module.exports = (env, callback) ->
             list.push item
         list = sortList list, options
         list
+      else if contents['lists']["#{options.listName}.json"]
+        contents['lists']["#{options.listName}.json"].metadata.map (item) ->
+          title: item.title
+          metadata: item
       else
         []
     else
@@ -63,6 +71,9 @@ module.exports = (env, callback) ->
 
   isHiddenFile = (fileName) ->
     fileName.indexOf('.') == 0
+
+  isJsonFile = (fileName) ->
+    fileName.match(/.json$/)?
 
 
   env.helpers.getList = getList
