@@ -2,26 +2,26 @@
   {
     "title": "Typing",
     "skills": [
-      ["Javascript"],
+      ["Javascript", "https://developer.mozilla.org/en-US/docs/Web/JavaScript"],
       ["Coffeescript", "http://coffeescript.org"],
-      ["node"],
-      ["Ruby"],
-      ["Rails"],
-      ["Python"],
-      ["Flask"],
-      ["PHP"],
-      ["SQL"],
-      ["MongoDB"]
+      ["node", "http://nodejs.org/"],
+      ["Ruby", "https://www.ruby-lang.org/"],
+      ["Rails", "http://rubyonrails.org/"],
+      ["Python", "http://www.python.org/"],
+      ["Flask", "http://flask.pocoo.org/"],
+      ["PHP", "http://www.php.net/"],
+      ["SQL", "http://en.wikipedia.org/wiki/SQL"],
+      ["MongoDB", "http://www.mongodb.org/"]
     ]
   },
 
   {
     "title": "Clicking",
     "skills": [
-      ["Photoshop"],
-      ["Logic Pro"],
-      ["Ableton Live"],
-      ["Max/MSP"]
+      ["Photoshop", "http://www.photoshop.com/"],
+      ["Logic Pro", "https://www.apple.com/logic-pro/"],
+      ["Ableton Live", "https://ableton.com/live"],
+      ["Max/MSP", "http://cycling74.com/products/max/"]
     ]
   },
 
