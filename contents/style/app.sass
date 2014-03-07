@@ -17,6 +17,7 @@
 // variables
 
 $break-small: 480px
+$break-tween: 600px
 $break-med: 800px
 $break-large: 960px
 
@@ -154,6 +155,30 @@ ul.list-helper
   &.music, &.web, &.sound
     & > li
       @include responsive-column
+
+  &.skills
+    ul li
+      list-style-type: none
+      display: inline-block
+      width: 20%
+      padding: 10px
+      vertical-align: top
+      width: 100%
+
+      h3 
+        font-size: 1.5em
+
+      @media screen and (min-width: $break-small)
+        width: 50%
+
+      @media screen and (min-width: $break-tween)
+        width: 33%
+
+      @media screen and (min-width: $break-med)
+        width: 25%
+
+      @media screen and (min-width: $break-large)
+        width: 20%
 
   &.education
     h3
